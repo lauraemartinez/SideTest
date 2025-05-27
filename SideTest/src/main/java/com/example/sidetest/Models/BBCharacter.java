@@ -1,20 +1,20 @@
 package com.example.sidetest.Models;
 
 public class BBCharacter {
-    public int getCharacterId() {
-        return CharacterId;
+    public int getId() {
+        return Id;
     }
 
-    public void setCharacterId(int characterId) {
-        CharacterId = characterId;
+    public void setId(int id) {
+        Id = id;
     }
 
-    public String getCharacterName() {
-        return CharacterName;
+    public String getName() {
+        return Name;
     }
 
-    public void setCharacterName(String characterName) {
-        CharacterName = characterName;
+    public void setName(String name) {
+        Name = name;
     }
 
     public String getGender() {
@@ -25,22 +25,22 @@ public class BBCharacter {
         Gender = gender;
     }
 
-    public String getCharacterImage() {
-        return CharacterImage;
+    public String getImage() {
+        return Image;
     }
 
-    public void setCharacterImage(String characterImage) {
-        CharacterImage = characterImage;
+    public void setImage(String image) {
+        Image = image;
     }
 
-    public int CharacterId;
-    public String CharacterName;
+    public int Id;
+    public String Name;
     public String Gender;
-    public String CharacterImage;
+    public String Image;
 
-    public BBCharacter(int characterId, String characterName, String gender) {
-        CharacterId = characterId;
-        CharacterName = characterName;
+    public BBCharacter(int id, String name, String gender) {
+        Id = id;
+        Name = name;
         Gender = gender;
     }
 
