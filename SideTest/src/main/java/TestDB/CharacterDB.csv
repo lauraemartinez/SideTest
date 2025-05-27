@@ -1,0 +1,4 @@
+CHARACTER_ID, CHARACTER_NAME, GENDER, CHARACTER_IMAGE
+1, Dottie Minerva, Female, https://bobsburgers-api.herokuapp.com/images/characters/1.jpg
+2, Mabel Abby Haddington, Female, https://bobsburgers-api.herokuapp.com/images/characters/2.jpg
+3, Adam, Male, https://bobsburgers-api.herokuapp.com/images/characters/3.jpg
