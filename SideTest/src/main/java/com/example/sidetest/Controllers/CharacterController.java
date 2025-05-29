@@ -1,13 +1,23 @@
 package com.example.sidetest.Controllers;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.sidetest.BobsBurgersApiClient.BBApiClient;
+import com.example.sidetest.Models.BBCharacter;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class CharacterController {
-    @GetMapping("/characters")
-    public String getAllCharacters(){
 
-        return "";
+    BBApiClient bbApiClient = new BBApiClient();
+
+    @GetMapping("/characters")
+    public List<BBCharacter> getAllCharacters(){
+        return bbApiClient.getAllBBCharacters();
+    }
+
+    @GetMapping("/characters/{id}")
+    public BBCharacter getCharacterById(@PathVariable String id){
+        return bbApiClient.getBBCharacter(Integer.parseInt(id));
     }
 }

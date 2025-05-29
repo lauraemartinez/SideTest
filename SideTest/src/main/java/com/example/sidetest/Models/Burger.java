@@ -34,4 +34,5 @@ public class Burger {
         Name = name;
         this.price = price;
     }
+    public Burger() {};
 }
