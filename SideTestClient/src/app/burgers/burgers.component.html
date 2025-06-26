@@ -1,1 +1,9 @@
-<p>burgers works!</p>
+<section>
+    <h1>burgers</h1>
+    <ul>
+        <li *ngFor="let burger of burgers">
+             {{burger.id}}: {{burger.name}}, {{burger.price}}
+        </li>
+        
+    </ul>
+</section>

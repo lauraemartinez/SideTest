@@ -13,11 +13,12 @@ import { NgForOf } from '@angular/common';
 })
 export class CharactersComponent implements OnInit {
         characters: any[] = [];
+        
         constructor(private charactersService: CharactersService){}
-        ngOnInit(): void {
+        
+        ngOnInit() {
           this.charactersService.getCharacters().subscribe(
-            character => this.characters = character,
-            error => console.error('Error fetching data:', error)
+            character => this.characters = character
           );
         }
 }

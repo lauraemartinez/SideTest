@@ -3,7 +3,7 @@ package com.example.sidetest.Models;
 public class Burger {
     public int Id;
     public String Name;
-    public double price;
+    public String price;
 
     public int getId() {
         return Id;
@@ -21,15 +21,15 @@ public class Burger {
         Name = name;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
-    public Burger(int id, String name, double price) {
+    public Burger(int id, String name, String price) {
         Id = id;
         Name = name;
         this.price = price;

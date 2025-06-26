@@ -1,15 +1,18 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
-import { response } from 'express';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class CharactersService {
-private http = inject(HttpClient); 
-  constructor() { }
+  private apiUrl = 'http://localhost:8080/characters';
+
+  constructor(private http: HttpClient) {}
+
   getCharacters(): Observable<any[]>{
-    return this.http.get<any[]>("characters")
+    return this.http.get<any>(this.apiUrl);
   }
+  
 }
