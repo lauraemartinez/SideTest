@@ -3,6 +3,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { BurgersService } from './burgers.service';
 import { NgForOf } from '@angular/common';
+import { AppComponent } from "../app.component";
 
 @Component({
   selector: 'app-burgers',

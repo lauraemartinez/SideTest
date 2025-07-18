@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Character } from '../character';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,14 @@ export class CharactersService {
 
   constructor(private http: HttpClient) {}
 
-  getCharacters(): Observable<any[]>{
-    return this.http.get<any>(this.apiUrl);
+  async getCharacters(): Promise<Character[]>{
+    const data = await fetch(this.apiUrl);
+    return (await data.json()) ?? [];
   }
   
+  async getCharacter(characterId: number): Promise<Character | undefined>{
+    const data = await fetch(`${this.apiUrl}?id=${characterId}`)
+    const characterJson = await data.json();
+    return characterJson[characterId-1] ?? {}
+  }
 }

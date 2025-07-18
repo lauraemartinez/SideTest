@@ -1,9 +1,18 @@
 <section>
-    <h1>characters</h1>
-    <ul>
-        <li *ngFor="let character of characters">
-             {{character.id}}: {{character.name}}, {{character.gender}}
-        </li>
-        
-    </ul>
+  <h4>characters</h4>
+  <div class="characterlist">
+
+  <div class="card" style="width: 18rem" *ngFor="let character of characterList">
+
+    <a class="nav-link" routerLink="{{ character.id }}">
+      <img src="{{ character.image }}" class="card-img-top" alt="" />
+      <div class="card-body">
+        <h5 class="card-title">{{ character.name }}</h5>
+        <!-- <p class="card-text">{{ character.gender }}</p> -->
+      </div>
+    </a>
+  </div>
+
+  </div>
 </section>
+

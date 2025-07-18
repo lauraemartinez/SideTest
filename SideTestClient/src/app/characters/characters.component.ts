@@ -1,8 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, inject, Injectable, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CharactersService } from './characters.service';
 import { NgForOf } from '@angular/common';
+import { Character } from '../character';
 
 
 @Component({
@@ -11,14 +11,18 @@ import { NgForOf } from '@angular/common';
   templateUrl: './characters.component.html',
   styleUrl: './characters.component.css'
 })
-export class CharactersComponent implements OnInit {
-        characters: any[] = [];
-        
-        constructor(private charactersService: CharactersService){}
-        
-        ngOnInit() {
-          this.charactersService.getCharacters().subscribe(
-            character => this.characters = character
-          );
-        }
+export class CharactersComponent{
+  characterList: Character[]| undefined;
+
+  characterService = inject(CharactersService)
+
+  constructor(){
+    this.characterService
+    .getCharacters()
+    .then((characterList: Character[]) =>
+    {
+      this.characterList = characterList;
+    })
+  }
+
 }
