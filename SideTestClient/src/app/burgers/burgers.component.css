@@ -1,8 +1,13 @@
 .burgerlist{
+  display: flex;
+  flex-flow: wrap;
   color: black;
   list-style: none;
   text-decoration: none;
+  row-gap: 50px;
+  justify-content: space-evenly;
 }
+
 a{
   color: black;
 }

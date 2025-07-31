@@ -1,14 +1,15 @@
 <section>
   <h4>burgers</h4>
-  <ul class="burgerlist">
-    <li>
-      <a
-        class="nav-link"
-        routerLink="{{ burger.id }}"
-        *ngFor="let burger of burgers"
-      >
-        {{ burger.id }}: {{ burger.name }}, {{ burger.price }}
-      </a>
-    </li>
-  </ul>
+<div class="burgerlist">
+
+  <div class="card" style="width: 18rem" *ngFor="let burger of burgerList">
+
+    <a class="nav-link" routerLink="{{ burger.id }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ burger.name }}</h5>      
+      </div>
+    </a>
+  </div>
+
+  </div>
 </section>

@@ -3,7 +3,43 @@ package com.example.sidetest.Models;
 public class Burger {
     public int Id;
     public String Name;
-    public String price;
+    public String Price;
+    public String Season;
+    public String Episode;
+    public String EpisodeUrl;
+    public String Url;
+
+    public String getSeason() {
+        return Season;
+    }
+
+    public void setSeason(String season) {
+        Season = season;
+    }
+
+    public String getEpisode() {
+        return Episode;
+    }
+
+    public void setEpisode(String episode) {
+        Episode = episode;
+    }
+
+    public String getUrl() {
+        return Url;
+    }
+
+    public void setUrl(String url) {
+        Url = url;
+    }
+
+    public String getEpisodeUrl() {
+        return EpisodeUrl;
+    }
+
+    public void setEpisodeUrl(String episodeUrl) {
+        EpisodeUrl = episodeUrl;
+    }
 
     public int getId() {
         return Id;
@@ -35,17 +71,11 @@ public class Burger {
     }
 
     public String getPrice() {
-        return price;
+        return Price;
     }
 
     public void setPrice(String price) {
-        this.price = price;
+        this.Price = price;
     }
 
-    public Burger(int id, String name, String price) {
-        Id = id;
-        Name = name;
-        this.price = price;
-    }
-    public Burger() {}
 }
